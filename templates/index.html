@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sentiment Analyzer</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico.png') }}" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Dark Mode Toggle -->
+  <div class="switch-container">
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider round"></span>
+    </label>
+  </div>
+
+  <!-- App Layout -->
+  <div class="app-container">
+    <h1 class="gradient-text">
+      <img src="{{ url_for('static', filename='logo.png') }}" alt="logo" style="height: 40px; vertical-align: middle; margin-right: 10px;">
+      Sentiment Analyzer
+    </h1>
+
+    <div class="card">
+
+
+      <!-- Review Form -->
+      <form id="sentiment-form">
+        <textarea id="review" placeholder="Type your review..." required></textarea>
+        <button type="submit">Analyze</button>
+      </form>
+
+      <!-- Sentiment Result -->
+      <div id="result" class="result-box"></div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
