@@ -6,6 +6,10 @@ from nltk.corpus import stopwords
 from nltk.tokenize import word_tokenize
 from nltk.sentiment.vader import SentimentIntensityAnalyzer
 
+nltk.download('punkt')
+nltk.download('stopwords')
+nltk.download('vader_lexicon')
+
 app = Flask(__name__)
 
 # Load ML model and vectorizer
